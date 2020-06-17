@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#1a202c">
+    <title>Inv-noice API</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5b96ec">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        ::selection {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            background-color: white;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #1a202c;
+            height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 23px;
+
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+
+        hr {
+            width: 100px;
+            border-right-style: initial;
+            border-bottom-style: initial;
+            border-left-style: initial;
+            border-right-color: initial;
+            border-bottom-color: initial;
+            border-left-color: initial;
+            border-width: 1px 0px 0px;
+            border-image: initial;
+            border-top: 1px solid rgb(234, 234, 234);
+            margin: 1.25rem auto;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        a:-webkit-any-link {
+            cursor: pointer;
+            color: inherit;
+            font-size: inherit;
+            border-bottom: 1px dotted;
+            -webkit-touch-callout: none;
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            -webkit-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+        }
+
+        a:-webkit-any-link:hover {
+            color: gray;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+        }
+
+        p {
+            display: block;
+        }
+
+        pre {
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            margin: 24px 0 40px;
+            white-space: pre;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            background: white;
+        }
+
+        code {
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        code.inline {
+            color: cornflowerblue;
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.5rem;
+            margin: 0 0 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li::before {
+            content: "-";
+            color: rgb(153, 153, 153);
+            position: absolute;
+            margin-left: -1rem;
+        }
+
+        li {
+            margin-bottom: 0.625rem;
+        }
+
+        .blue {
+            background-color: cornflowerblue;
+            color: white;
+            font-size: .8rem;
+            padding: .25rem .45rem;
+            border-radius: 1000px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        footer {
+            color: grey;
+        }
+
+        footer a:-webkit-any-link {
+            color: cornflowerblue;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            place-content: center;
+            display: grid;
+            place-items: center;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: #1a202c; color: white; padding: .5rem 0">
+        <div class="container" style="display: flex; align-items: center;">
+            <div>
+                <small><b>API v1</b> &mdash; Documentation</small>
+            </div>
+            <div style="margin-left: auto;">
+                <small style="font-weight: 500; margin-right: .5rem;">Source</small>
+            </div>
+            <img src="/img/github-mark.png" width="18" />
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <header>
+                <br />
+                <h1>Inv&ndash;noice <span class="blue" style="margin-left: .25rem;">API</span></h1>
+                <hr />
+                <br />
+                <p>A small serverless Node.js API.
+                    Hosted with <a href="https://vercel.com/" title="Vercel" target="_blank">Vercel.</a><br />
+                    See the <a>docs</a> for more info.
+                </p>
+                <br />
+            </header>
+            <main>
+                <p>A brief overview of our <b><code class="inline">api</code></b> routes:</p>
+                <ul>
+                    <li><code class="inline">`POST /api/v1/invoices`</code> - Create an invoice.</li>
+                    <li><code class="inline">`GET /api/v1/invoices`</code> - List all invoices.</li>
+                    <li><code class="inline">`GET /api/v1/invoices/:invoice_id`</code> - View invoice details.</li>
+                    <li><code class="inline">`PATCH /api/v1/invoices/:invoice_id`</code> - Update an invoice.</li>
+                    <li><code class="inline">`DELETE /api/v1/invoices/:invoice_id`</code> - Delete an invoice.</li>
+                </ul>
+            </main>
+            <footer>
+                <hr />
+                <p style="margin-top: 2rem;">
+                    <small>An example by <a href="https://www.github.com/peterjskaltsis" title="Peter S."
+                            target="_blank">@peterjskaltsis</a>.</small>
+                </p>
+                <br />
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

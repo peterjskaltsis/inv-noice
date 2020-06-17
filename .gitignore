@@ -1,0 +1,9 @@
+.dist
+.now
+node_modules
+.DS_Store
+
+# Environment Variables
+.env
+.env.build
+.vercel

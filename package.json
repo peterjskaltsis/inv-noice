@@ -1,0 +1,11 @@
+{
+  "scripts": {},
+  "devDependencies": {
+    "@types/mongoose": "^5.7.24",
+    "@vercel/node": "^1.7.0"
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^7.2.0",
+    "mongoose": "^5.9.19"
+  }
+}
