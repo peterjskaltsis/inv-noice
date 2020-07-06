@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@vercel/node'
-import { listInvoices, createInvoice, findInvoiceById } from '../../../controllers/invoice-controller'
+import { findInvoiceById } from '../../../controllers/invoice-controller'
 import handler from '../../../utils/proto'
 
 const router = handler()
@@ -16,6 +16,5 @@ router.get((req: NowRequest, res: NowResponse) => {
     res.status(400).json({ success: false, invoice: {}, message: e.toString() })
   }
 })
-
 
 export default router

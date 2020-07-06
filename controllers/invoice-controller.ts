@@ -2,9 +2,9 @@ import Invoice, { InvoiceClass } from '../models/invoice.model'
 
 // Mock data.
 var invoice_collection: Array<InvoiceClass> = [
-  new Invoice({ _id: 0, total: 20.00, to: "peter", from: "adon" }),
-  new Invoice({ _id: 1, total: 115.00, to: "adon", from: "peter" }),
-  new Invoice({ _id: 2, total: 120.50, to: "gabby", from: "liam" }),
+  new Invoice({ _id: 0, total: 20.00, to: "peter", from: "john" }),
+  new Invoice({ _id: 1, total: 115.00, to: "john", from: "peter" }),
+  new Invoice({ _id: 2, total: 120.50, to: "abby", from: "liam" }),
 ]
 
 /**

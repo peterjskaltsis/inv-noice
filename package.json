@@ -1,4 +1,11 @@
 {
+  "name": "inv-noice",
+  "version": "1.0",
+  "description": "An experimental serverless Node.js API.",
+  "author": {
+    "name": "Peter Skaltsis",
+    "url": "https://peter-s.now.sh"
+  },
   "scripts": {},
   "devDependencies": {
     "@types/mongoose": "^5.7.24",
